@@ -25,7 +25,7 @@ const reducer = (state: State, action: Action): State => {
   }
 };
 
-const CounterReducer = () => {
+export const CounterReducer = () => {
   const [state, dispatch] = React.useReducer<State, Action>(
     reducer,
     initialState
@@ -41,4 +41,4 @@ const CounterReducer = () => {
   );
 };
 
-export default CounterReducer;
+

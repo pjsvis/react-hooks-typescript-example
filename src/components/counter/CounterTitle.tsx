@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const CounterTitle = () => {
+export const CounterTitle = () => {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(
@@ -24,4 +24,3 @@ const CounterTitle = () => {
   );
 };
 
-export default CounterTitle;

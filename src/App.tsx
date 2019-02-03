@@ -1,10 +1,13 @@
 import * as React from "react";
 import "./App.css";
-import Counter from "./Counter";
-import CounterReducer from "./CounterReducer";
-import CounterTitle from "./CounterTitle";
+
 import GitHubLogo from "./GitHubLogo";
 import Title from "./Title";
+import {Counter} from './components/counter/Counter';
+import {CounterTitle} from './components/counter/CounterTitle';
+import {CounterReducer} from './components/counter/CounterReducer';
+import { HackerNews } from './components/get-data/hacker-news';
+import { Header, Sidebar, ToggleButton, headerItems, Item } from './components/sidebar/Sidebar';
 
 // An object of all possible example components that can be rendered
 const EXAMPLES = {
@@ -35,17 +38,28 @@ const App = () => {
       {name} /&gt;
     </button>
   ));
+  const [isOpen, toggleIsOpen] = React.useState(false);
 
   return (
     <>
-      <Title />
-      <GitHubLogo />
+      <Header className="header">
+           <Sidebar pose={isOpen ? "open" : "closed"}>
+          <ToggleButton onClick={() => toggleIsOpen(!isOpen)}>X</ToggleButton>
+          {headerItems.map(item => (
+            <Item>{item.name}</Item>
+          ))}
+        </Sidebar>
+      </Header>
+      {/* <Title /> */}
+      {/* <GitHubLogo /> */}
       <div className="container">
-        <div className="app">
+        {/* <div className="app">
           {exampleButtons}
           <div className="separator" />
           <ExampleComponent />
-        </div>
+
+        </div> */}
+        <div><HackerNews /></div>
       </div>
     </>
   );
