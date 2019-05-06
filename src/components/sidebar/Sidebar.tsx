@@ -14,7 +14,7 @@ export const AppContainer = styled.div`
 
 export const headerItems = [
   {
-    name: "test"
+    name: "Some text that explains in greater detail why it is that we need to fill out these forms."
   },
   {
     name: "test"
@@ -32,14 +32,14 @@ const AnimatedSidebar = posed.ul({
     x: "0%",
     delayChildren: 200,
     staggerChildren: 50,
-    background: "rgba(120, 120, 120, 1)",
+    background: "rgba(0, 27, 68, 1)",
     transition: {
       x: "spring"
     }
   },
   closed: {
     x: "-260px",
-    background: "rgba(120, 120, 120, 0)",
+    background: "rgba(0, 27, 68, 1)",
     transition: {
       x: "spring"
     }
@@ -65,6 +65,7 @@ export const ToggleButton = styled.button`
   width: 40px;
   height: 40px;
   align-self: flex-end;
+  color: white;
 `;
 
 export const AnimatedItems = posed.li({
@@ -77,53 +78,20 @@ export const AnimatedItems = posed.li({
 });
 
 export const Item = styled(AnimatedItems)`
-  height: 30px;
+  height: auto;
   width: 80%;
   padding: 5px 0;
   margin: 10px 0;
   background: white;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 10px;
   border-radius: 10px;
+  font-size: 90%;
 `;
 
 export const Header = styled.div`
-  height: 40px;
+  height: 80px;
   width: 100%;
-  background: grey;
+  background: rgba(0,27,68,1);
 `;
-
-// function App() {
-//   const [isOpen, toggleIsOpen] = React.useState(false);
-//   // const toggleSidebar = currentIsOpen => {
-//   //   console.log("currentIsOpen: ", currentIsOpen);
-//   //   return toggleIsOpen(!currentIsOpen);
-//   // };
-//   return (
-//     <AppContainer className="sans-serif">
-//       <Header className="header">
-//            <Sidebar pose={isOpen ? "open" : "closed"}>
-//           <ToggleButton onClick={() => toggleIsOpen(!isOpen)}>X</ToggleButton>
-//           {headerItems.map(item => (
-//             <Item>{item.name}</Item>
-//           ))}
-//         </Sidebar>
-//       </Header>
-
-//       <div className="ma2">
-
-//       <div>
-//         <h1>Ayyyy other stuff on the page</h1>
-//         <div>Icon here: <i className="fas fa-check green"></i></div>
-//       </div>
-//       <div className="footer">
-//         <h2>footer stuff</h2>
-//       </div>
-//       </div>
-//     </AppContainer>
-//   );
-// }
-
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);

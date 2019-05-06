@@ -1,14 +1,29 @@
-.fit-h {  
-    height:fit-content; 
+.fit-h {
+  height: fit-content;
 }
 
 .fit-w {
-    width:fit-content; 
+  width: fit-content;
 }
 
-.fit{
-    height:fit-content; 
-    width:fit-content; 
+.fit {
+  height: fit-content;
+  width: fit-content;
 }
 
-.br-50 {     border-radius: 50%; }
+.br-50 {
+  border-radius: 50%;
+}
+
+/* Tippy themes
+ */
+.tippy-tooltip.tomato-theme {
+  background-color:#fbf1a9;
+  color: black;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.tippy-tooltip.tomato-theme .tippy-roundarrow {
+  fill: #fbf1a9;
+}
