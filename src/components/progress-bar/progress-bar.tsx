@@ -7,8 +7,8 @@ import { Tooltip, Popover, FunkyTooltip } from "./tooltip";
 interface Props {}
 
 const complete = "btn btn-success btn-sm ba br2  hover-black f6";
-const current = "btn btn-primary btn-sm ba  hover-black";
-const todo = "btn btn-secondary btn-sm ba hover-black";
+const current = "btn btn-primary btn-sm ba  hover-white";
+const todo = "btn btn-secondary btn-sm ba white  hover-black";
 
 interface CompleteProps {
   caption: string;
@@ -38,12 +38,12 @@ const Check = () => {
 export const ProgressBar = (props: Props) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   return (
-    <div className="ba br3 b--black-10 pa3 mt2 mb2 bg-dark-gray  shadow-1">
+    <div className="bt pa3 bg-dark-gray">
       <div className="white tc f5 mb2">
-        <Popover         
+        <Popover
           content={
             <div className="tl">
-              <div className="f5 mb1">Breach Submission Forms</div>
+              <div className="f5 ">Breach Submission Forms</div>
               <p>
                 The forms in this panel will allow you to record the details of
                 the breach that you are reporting.
@@ -67,14 +67,17 @@ export const ProgressBar = (props: Props) => {
           }
         >
           <span className="fr">
-            <i className="fa fa-fw fa-lg fa-question-circle washed-blue pointer" />
+            <i
+              className="fa fa-fw fa-lg fa-question-circle washed-blue pointer"
+              title="Click here for help with. the breach submission process."
+            />
           </span>
         </Popover>
         Breach Submission Progress (60% complete)
       </div>
       <Complete caption="About You" />
       <Arrow />
-      <Tooltip content={<div>Hello there big boy</div>}>
+      <Tooltip content={<div>Please indicate who identified the breach.</div>}>
         <button className={complete} title="Who identified the breach?">
           2. Who identified
           <Check />
@@ -100,7 +103,7 @@ export const ProgressBar = (props: Props) => {
         className={current}
         title="How would you categorise the breach?"
       >
-        5. Categorise      
+        5. Categorise
       </a>
       <Arrow />
       <a
@@ -110,7 +113,6 @@ export const ProgressBar = (props: Props) => {
       >
         6. Remediation
       </a>
-    
     </div>
   );
 };
