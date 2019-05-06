@@ -1,0 +1,14 @@
+.fit-h {  
+    height:fit-content; 
+}
+
+.fit-w {
+    width:fit-content; 
+}
+
+.fit{
+    height:fit-content; 
+    width:fit-content; 
+}
+
+.br-50 {     border-radius: 50%; }
