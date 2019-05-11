@@ -14,8 +14,10 @@ import { ProgressBar } from "./components/progress-bar/progress-bar";
 import { FunkyTooltip, Popover } from "./components/progress-bar/tooltip";
 import ReactMarkdown from "react-markdown";
 import { Image } from "./components/user/user-styles";
-import {imageURL} from './imageURL';
-import { markdown } from './markdown';
+import { imageURL } from "./imageURL";
+import { markdown } from "./markdown";
+import { SwitchForm } from "./components/switch-form/switch-form";
+import { CheckboxForm } from "./components/switch-form/checkbox-form";
 
 const App = () => {
   const [isOpen, toggleIsOpen] = React.useState(false);
@@ -46,6 +48,7 @@ const App = () => {
             About
           </div>
         </div>
+
         {/* <Sidebar pose={isOpen ? "open" : "closed"}>
           <ToggleButton onClick={() => toggleIsOpen(!isOpen)}>X</ToggleButton>
           {headerItems.map(item => (
@@ -53,14 +56,23 @@ const App = () => {
           ))}
         </Sidebar> */}
       </Header>
+
       <div className="container mt2">
         <div className="ba b--black-10 w-100 vh-75 mt2 shadow-4">
-          <ProgressBar />
+          <div className="ba br3 b--black-10 pa2 shadow-4">
+            {/* <SwitchForm /> */}
+            <CheckboxForm />
+            <CheckboxForm />
+            <CheckboxForm />
+            <CheckboxForm />
+          </div>
+
+          {/* <ProgressBar /> */}
           <div className="pa3">
             <Popover
               content={
                 <ReactMarkdown
-                  className="tl black-90"
+                  className="pa1 tl black-90 white"
                   escapeHtml={false}
                   source={markdown}
                   linkTarget="_blank"
