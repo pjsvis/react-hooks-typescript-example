@@ -38,6 +38,7 @@
     "react-styleguidist": "^8.0.6",
     "react-switch": "^5.0.0",
     "styled-components": "^4.2.0",
+    "styled-flex-component": "^3.0.0",
     "tachyons": "^4.11.1"
   },
   "browserslist": [

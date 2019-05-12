@@ -37,11 +37,11 @@ export const CheckboxForm = () => (
       initialValues={{ gender: false, creditCard: false, homeAddress: false}}
       render={({ handleSubmit, form, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit}>
-          <div className="ba br3 b--black-10 pa3 mb1 w-25 shadow-4">
+          <div className="ba br3 b--black-10 pa3 mb1 shadow-4">
             <div className="f4 black-80 fw4 mb2">Basic Personal</div>
             
             <label
-              className="ba br3 b--black-10 pa2 w-20 bg-blue white w-100 pointer hover-black grow"
+              className="ba br3 b--black-10 pa2 bg-blue white w-100 pointer hover-black"
               labelfor="gender"
             >
               <div className="fl">Gender</div>
@@ -50,7 +50,7 @@ export const CheckboxForm = () => (
             </label>
 
             <label
-              className="ba br3 b--black-10 pa2 bg-blue white w-100 pointer hover-black grow"
+              className="ba br3 b--black-10 pa2 bg-blue white w-100 pointer hover-black"
               labelfor="homeAddress"
             >
               <div className="fl">Home Address</div>
@@ -62,7 +62,7 @@ export const CheckboxForm = () => (
             </label>
 
             <label
-              className="ba br3 b--black-10 pa2 bg-blue white w-100 pointer hover-black grow"
+              className="ba br3 b--black-10 pa2 bg-blue white w-100 pointer hover-black"
               labelfor="creditCard"
             >
               <div className="fl">Credit Card</div>
@@ -73,7 +73,7 @@ export const CheckboxForm = () => (
               />
             </label>
 
-            <pre className="f6">{JSON.stringify(values, 0, 2)}</pre>
+            {/* <pre className="f6">{JSON.stringify(values, 0, 2)}</pre> */}
             <div>
               <div className="buttons">
                 <button type="submit" disabled={submitting || pristine}>

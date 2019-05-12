@@ -18,6 +18,7 @@ import { imageURL } from "./imageURL";
 import { markdown } from "./markdown";
 import { SwitchForm } from "./components/switch-form/switch-form";
 import { CheckboxForm } from "./components/switch-form/checkbox-form";
+import { ComproContainer } from "./components/compromised-data/compro-container";
 
 const App = () => {
   const [isOpen, toggleIsOpen] = React.useState(false);
@@ -58,16 +59,18 @@ const App = () => {
       </Header>
 
       <div className="container mt2">
-        <div className="ba b--black-10 w-100 vh-75 mt2 shadow-4">
+        <ComproContainer />
+
+        {/* <div className="ba b--black-10 w-100 vh-75 mt2 shadow-4">
           <div className="ba br3 b--black-10 pa2 shadow-4">
-            {/* <SwitchForm /> */}
+          
             <CheckboxForm />
             <CheckboxForm />
             <CheckboxForm />
             <CheckboxForm />
           </div>
 
-          {/* <ProgressBar /> */}
+         
           <div className="pa3">
             <Popover
               content={
@@ -88,7 +91,7 @@ const App = () => {
             </Popover>
             Form
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
