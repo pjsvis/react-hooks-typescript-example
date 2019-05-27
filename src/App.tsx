@@ -1,6 +1,7 @@
 import * as React from "react";
 import "tachyons";
 import "colors.css";
+import 'animate.css'
 import { HackerNews } from "./components/get-data/hacker-news";
 import {
   Header,
@@ -19,12 +20,13 @@ import { markdown } from "./markdown";
 import { SwitchForm } from "./components/switch-form/switch-form";
 import { CheckboxForm } from "./components/switch-form/checkbox-form";
 import { ComproContainer } from "./components/compromised-data/compro-container";
+import { TachyonsBootstrap } from "./components/tachyons-bootstrap/tachyons-bootstrap";
 
 const App = () => {
   const [isOpen, toggleIsOpen] = React.useState(false);
 
   return (
-    <>
+    <>    
       <Header className="header pa3 pl4 white f5">
         <div className="pt3">
           <div className="fl">
@@ -59,6 +61,7 @@ const App = () => {
       </Header>
 
       <div className="container mt2">
+      <TachyonsBootstrap />
         <ComproContainer />
 
         {/* <div className="ba b--black-10 w-100 vh-75 mt2 shadow-4">

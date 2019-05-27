@@ -10,10 +10,14 @@ const complete = "btn btn-success btn-sm ba br2  hover-black f6";
 const current = "btn btn-primary btn-sm ba  hover-white";
 const todo = "btn btn-secondary btn-sm ba white  hover-black";
 
+
 interface CompleteProps {
   caption: string;
 }
 const Complete = (props: CompleteProps) => {
+
+  
+
   return (
     <button
       className={complete}
@@ -39,6 +43,7 @@ export const ProgressBar = (props: Props) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   return (
     <div className="bt pa3 bg-dark-gray">
+      
       <div className="white tc f5 mb2">
         <Popover
           content={

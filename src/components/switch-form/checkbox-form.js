@@ -30,9 +30,10 @@ const SwitchAdapter = ({ input: { onChange, value }, label, ...rest }) => (
 );
 
 export const CheckboxForm = () => (
-  <div>
+  <div className="animated slideInRight">
     {/* <Styles> */}
     <Form
+    className="animated  slideInRight"
       onSubmit={onSubmit}
       initialValues={{ gender: false, creditCard: false, homeAddress: false}}
       render={({ handleSubmit, form, submitting, pristine, values }) => (
